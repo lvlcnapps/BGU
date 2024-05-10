@@ -1,4 +1,5 @@
 import random as r
+import exercises as exe
 def load():
     num = r.randint(int(input('Input first ')),int(input('Input second ')))
     guess = input('Guess the number: ')
@@ -113,4 +114,4 @@ def load_4():
 
 
 if __name__ == '__main__':
-    load_4()
+    exe.Exercises(5)
