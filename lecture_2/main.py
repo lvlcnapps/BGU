@@ -1,4 +1,7 @@
 import math
+import hw1
+import hw2
+import hw3
 def result(a,b): # 0 - rock, 1 - paper, 2 - scissors
     if (a == b):
         return 0
@@ -68,4 +71,5 @@ def resheto_eratosphena(n):
 
 
 if __name__ == '__main__':
-    start4()
+    # start4()
+    hw3.sol()
