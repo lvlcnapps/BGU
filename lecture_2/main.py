@@ -2,13 +2,16 @@ import math
 import hw1
 import hw2
 import hw3
-def result(a,b): # 0 - rock, 1 - paper, 2 - scissors
-    if (a == b):
+
+
+def result(a, b):  # 0 - rock, 1 - paper, 2 - scissors
+    if a == b:
         return 0
     rz = a - b
-    if (rz < 0):
+    if rz < 0:
         rz += 3
     return rz
+
 
 def start4():
     while True:
@@ -22,7 +25,7 @@ def start4():
             continue
         inputs = []
         for i in range(numb):
-            print(f"Player {i+1}: ", end="")
+            print(f"Player {i + 1}: ", end="")
             inputs.append(input())
         ids = list(range(numb))
         for i, val in enumerate(inputs):
@@ -37,8 +40,6 @@ def start4():
         if len(uniq) == 1 or len(uniq) == 3:
             print("Draw")
             continue
-
-        #print(uniq)
         ans = uniq[result(uniq[0], uniq[1]) - 1]
         if ans == 0:
             print("Rock win")
@@ -46,6 +47,7 @@ def start4():
             print("Paper win")
         if ans == 2:
             print("Scissors win")
+
 
 def find_prime_numbers(n):
     prime_numbers = []
@@ -58,6 +60,7 @@ def find_prime_numbers(n):
         if is_prime:
             prime_numbers.append(i)
     return prime_numbers
+
 
 def resheto_eratosphena(n):
     numbers = [i for i in range(0, n)]
@@ -72,4 +75,6 @@ def resheto_eratosphena(n):
 
 if __name__ == '__main__':
     # start4()
+    hw1.sol()
+    hw2.sol()
     hw3.sol()

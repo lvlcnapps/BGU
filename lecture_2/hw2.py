@@ -87,11 +87,14 @@ def third(h):
 
 
 def sol():
-    n = int(input('Number: '))
+    try:
+        n = int(input('Number: '))
 
-    ans = third(n // 100)
-    if second(n % 100) == "":
-        ans += second_full(n % 100 // 10) + " " + first(n % 10)
-    else:
-        ans += second(n % 100)
-    print(ans)
+        ans = third(n // 100)
+        if second(n % 100) == "":
+            ans += second_full(n % 100 // 10) + " " + first(n % 10)
+        else:
+            ans += second(n % 100)
+        print(ans)
+    except Exception:
+        print("incorrect input")
