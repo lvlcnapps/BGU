@@ -1,4 +1,3 @@
-import random as r
 plays = 0.0
 max_sides = int(input('Input sides: '))
 min = max_sides
