@@ -1,21 +1,16 @@
-import Game as g
+import Game
 
-game = g.Game()
-
+game = Game.Game()
 try:
     n = int(input('Enter number of axis: '))
-    cords = []
-    player_1 = []
-    player_2 = []
+    cords = [[], []]
     print(f'Print {n} coords for player 1')
     for i in range(n):
-        player_1.append(int(input()))
+        cords[0].append(int(input()))
     print(f'Print {n} coords for player 2')
     for i in range(n):
-        player_2.append(int(input()))
-    cords.append(player_1)
-    cords.append(player_2)
+        cords[1].append(int(input()))
     print(cords)
-    game.start(cords, int(input('Max steps: ')))
+    game.start(cords, int(input('Max steps: ')), int(input('Runner speed: ')), int(input('Chaser speed: ')))
 except Exception:
     game.start()

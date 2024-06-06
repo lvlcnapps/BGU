@@ -1,12 +1,12 @@
 class Player:
-    def __init__(self, chaser=False, cords=None):
+    def __init__(self, chaser=False, cords=None, speed=1, max_speed=2):
         if cords is None:
             self.cords = [0, 0]
         self.chaser = chaser
         self.cords = cords
-        self.speed = 2 if self.chaser else 1
+        self.speed = max_speed if self.chaser else speed
 
-    def move_pl(self, command): # command: axis-direction
+    def move_player(self, command):  # command: axis-direction
         kom = command.split()
         try:
             axis = int(kom[0]) - 1
