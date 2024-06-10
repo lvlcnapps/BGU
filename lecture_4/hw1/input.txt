@@ -1,0 +1,6 @@
+Biden,90
+Igor,100
+Dumb,0
+Alblak,52
+Elon,70
+Bebra,87
