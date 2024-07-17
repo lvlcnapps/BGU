@@ -1,23 +1,26 @@
 import time
 
 
-def count_ways(n, temp=None):
-    if temp is None:
-        temp = {}
+def count_ways(n):
+    def rec_find(n, temp=None):
+        if temp is None:
+            temp = {}
 
-    if n in temp:
+        if n in temp:
+            return temp[n]
+
+        if n == 0:
+            return 1
+        if n == 1:
+            return 1
+
+        temp[n] = rec_find(n - 1, temp) + rec_find(n - 2, temp)
         return temp[n]
-
-    if n == 0:
-        return 1
-    if n == 1:
-        return 1
-
-    temp[n] = count_ways(n - 1, temp) + count_ways(n - 2, temp)
-    return temp[n]
+    return rec_find(n - 1)
 
 
 def tricky_solution(n):
+    n -= 1
     a, b = 1, 1
     for _ in range(n):
         a, b = b, a + b
